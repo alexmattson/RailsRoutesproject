@@ -10,3 +10,6 @@ u1 = User.create(username: 'coolguyz3')
 u2 = User.create(username: 'coolgurlz3')
 c1 = Contact.create(name: 'first_contact', email: 'yo@yoyoyo.yo', user_id: u2.id )
 ContactShare.create(contact_id: c1.id, user_id: u1.id)
+
+Comment.create(comment: "you are cool", user_id: u2.id,
+  commentable_id: u1.id, commentable_type: u1.class.to_s)
